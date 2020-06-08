@@ -1,0 +1,13 @@
+package com.abhishekd.springbootgraphql;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+class SpringBootGraphqlApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}

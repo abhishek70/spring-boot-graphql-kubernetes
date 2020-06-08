@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-boot-graphql
+  labels:
+    app: spring-boot-graphql
+spec:
+  selector:
+    app: spring-boot-graphql
+  ports:
+  - protocol: "TCP"
+    port: 8080
+    targetPort: 8080
+    name: http
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-boot-graphql
+  labels:
+    app: spring-boot-graphql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-boot-graphql
+  template:
+    metadata:
+      labels:
+        app: spring-boot-graphql
+    spec:
+      containers:
+      - name: spring-boot-graphql
+        image: <IMAGE-REGISTRY-USERNAME>/spring-boot-graphql:1.0
+        ports:
+        - containerPort: 8080

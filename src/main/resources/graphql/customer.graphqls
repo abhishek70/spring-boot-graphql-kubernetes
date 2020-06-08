@@ -1,0 +1,16 @@
+# Customer Object
+type Customer {
+    id: ID!
+    firstName: String!
+    lastName: String!
+}
+
+# Customer Query
+type Query {
+    getAllCustomers: [Customer]!
+}
+
+# Customer Mutation
+type Mutation {
+    addCustomer(firstName: String!, lastName: String!) : Customer!
+}
