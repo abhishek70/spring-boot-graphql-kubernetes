@@ -62,3 +62,4 @@ minikube delete
 ### Documentation
 1. [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/)
 2. [Kubernetes Deployment](https://kubernetes.io/docs/tutorials/)
+3. [GraphQL Spring Boot](https://www.graphql-java-kickstart.com/spring-boot/)
